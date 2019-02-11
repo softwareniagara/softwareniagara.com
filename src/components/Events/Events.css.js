@@ -21,12 +21,24 @@ export const StyledListItem = styled.li`
   text-align: left;
   width: 100%;
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   @media screen and (max-width: ${theme.base.screen.sm}) {
     margin-bottom: 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   @media screen and (max-width: ${theme.base.screen.xs}) {
     margin-bottom: 0.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 `
 
