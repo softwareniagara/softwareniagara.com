@@ -5,8 +5,4 @@ export default styled.div`
   flex-direction: row;
   margin-bottom: 3rem;
   justify-content: center;
-
-  .is-secondary {
-    margin-right: 5px;
-  }
 `

@@ -1,13 +1,15 @@
 import React from 'react'
 
-import COC from '../components/COC'
+import Action from '../components/Action'
 import DefaultLayout from '../layouts/Default'
 import Events from '../components/Events'
 
 export default ({ pageContext: { events } } = { events: [] }) => {
   return (
     <DefaultLayout>
-      <COC />
+      <Action primary to='/code-of-conduct'>
+       📜 Code of Conduct
+      </Action>
       <Events events={events} />
     </DefaultLayout>
   )
