@@ -3,6 +3,7 @@ module.exports = {
     title: 'Software Niagara',
   },
   plugins: [
+    'gatsby-plugin-react-helmet',
     'gatsby-plugin-react-svg',
     'gatsby-plugin-styled-components',
     'gatsby-transformer-remark',

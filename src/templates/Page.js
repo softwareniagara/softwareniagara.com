@@ -1,3 +1,4 @@
+import Helmet from 'react-helmet'
 import React from 'react'
 
 import Action from '../components/Action'
@@ -11,6 +12,9 @@ export default ({ pageContext: { page } } = { page: {} }) => {
         📅 Back to Events
       </Action>
       <Page {...page} />
+      <Helmet>
+        <title>{page.title} | Software Niagara</title>
+      </Helmet>
     </DefaultLayout>
   )
 }

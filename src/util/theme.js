@@ -24,7 +24,7 @@ export default {
   light: {
     backgroundColor: {
       primary: '#FFFFFF',
-      secondary: '#F6F7FD',
+      secondary: '#EEF1F4',
     },
     headingColor: {
       primary: '#1B1B1B',

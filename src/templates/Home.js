@@ -1,3 +1,4 @@
+import Helmet from 'react-helmet'
 import React from 'react'
 
 import Action from '../components/Action'
@@ -11,6 +12,10 @@ export default ({ pageContext: { events } } = { events: [] }) => {
        📜 Code of Conduct
       </Action>
       <Events events={events} />
+      <Helmet>
+        <title>Events | Software Niagara</title>
+        <meta name="description" content="Startup and tech events for web and game developers in Niagara" />
+      </Helmet>
     </DefaultLayout>
   )
 }
