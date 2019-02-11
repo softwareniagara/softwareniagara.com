@@ -9,7 +9,9 @@ export default styled.span`
   font-size: 0.8rem;
   font-weight: 600;
   line-height: 1.2;
+  margin-top: 0.25rem;
   text-transform: uppercase;
+  white-space: nowrap;
 
   &.is-primary {
     background-color: ${theme.base.accentColor.tertiary};

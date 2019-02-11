@@ -1,5 +1,6 @@
 import React from 'react'
 
+import BlankSlate from './BlankSlate'
 import EventCard from '../EventCard'
 import StyledEvents, {
   StyledLink,
@@ -7,16 +8,22 @@ import StyledEvents, {
   StyledListItem,
 } from './Events.css'
 
-export default ({ events }) => (
-  <StyledEvents>
-    <StyledList>
-      {events.map(event => (
-        <StyledListItem>
-          <StyledLink key={event.id}>
-            <EventCard {...event }/>
-          </StyledLink>
-        </StyledListItem>
-      ))}
-    </StyledList>
-  </StyledEvents>
-)
+export default ({ events = [] }) => {
+  if (!events.length) {
+    return <BlankSlate>No events yet. Check back soon.</BlankSlate>
+  }
+
+  return (
+    <StyledEvents>
+      <StyledList>
+        {events.map(event => (
+          <StyledListItem>
+            <StyledLink key={event.id}>
+              <EventCard {...event }/>
+            </StyledLink>
+          </StyledListItem>
+        ))}
+      </StyledList>
+    </StyledEvents>
+  )
+}

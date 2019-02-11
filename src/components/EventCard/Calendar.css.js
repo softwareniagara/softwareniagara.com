@@ -6,7 +6,9 @@ export default styled.div`
   border-radius: 3px;
   border: 2px solid ${theme.light.headingColor.primary};
   display: inline-block;
-  min-width: 6rem;
+  height: auto;
+  margin-bottom: auto;
+  min-width: 4rem;
   overflow: hidden;
 
   @media screen and (max-width: ${theme.base.screen.sm}) {
@@ -26,7 +28,7 @@ export const StyledHeader = styled.div`
 
 export const StyledBody = styled.div`
   border-top: none;
-  padding: 0.2rem 0.2rem 0.5rem 0.2rem;
+  padding: 0.2rem;
   text-align: center;
   text-transform: uppercase;
 `
@@ -34,11 +36,12 @@ export const StyledBody = styled.div`
 export const StyledDay = styled.span`
   color: ${theme.light.headingColor.primary};
   display: block;
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: bold;
 `
 
 export const StyledYear = styled.span`
   color: ${theme.light.mutedColor.primary};
   display: block;
+  font-size: 0.8rem;
 `

@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 
 import Badge from '../Badge'
 import { formatDate, isFuture } from '../../util/dates'
@@ -12,11 +13,7 @@ import StyledEventDetails, {
 } from './Details.css'
 
 const getBadge = date => isFuture(date)
-  ? (
-    <>
-      <Badge primary>Coming Up</Badge>
-    </>
-  )
+  ? <Badge primary>Coming Up</Badge>
   : null
 
 const getDateAndTime = (date, time) => {
@@ -32,7 +29,9 @@ export default ({ date, summary, time, title, venue }) => {
   return (
     <StyledEventDetails>
       <StyledHeader>
-        <StyledH3>{title} {badge}</StyledH3>
+        <StyledH3>
+          <span>{title}</span> {badge}
+        </StyledH3>
         <StyledDateAndTime>
           {dateAndTime}
         </StyledDateAndTime>

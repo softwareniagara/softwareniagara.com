@@ -24,14 +24,16 @@ export const StyledHeader = styled.header`
 `
 
 export const StyledH3 = styled.h3`
-  align-items: center;
+  align-items: flex-start;
   color: ${theme.light.headingColor.primary};
   display: flex;
   font-size: 1.5rem;
   font-weight: 600;
+  height: auto;
   line-height: 1.2;
   justify-content: space-between;
   margin: 0;
+  margin-bottom: auto;
   width: 100%;
 
   @media screen and (max-width: ${theme.base.screen.sm}) {
