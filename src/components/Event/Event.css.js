@@ -34,6 +34,11 @@ export const StyledBody = styled.div`
   padding: 0.5rem 1rem 1.5rem 1rem;
 `
 
+export const StyledFooter = styled.footer`
+  padding-bottom: 2rem;
+  text-align: center;
+`
+
 export const StyledHeader = styled.header`
   background-color: ${theme.base.dangerColor.primary};
   color: white;

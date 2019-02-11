@@ -3,6 +3,9 @@ import styled, { createGlobalStyle } from 'styled-components'
 import theme from '../../util/theme'
 
 export const GlobalStyle = createGlobalStyle`
+  html {
+    background-color: ${theme.base.accentColor.primary};
+  }
   body {
     line-height: 1;
     margin: 0;

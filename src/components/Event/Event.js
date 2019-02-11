@@ -1,9 +1,11 @@
 import React from 'react'
 
+import Button from '../Button'
 import { formatDate } from '../../util/dates'
 import StyledEvent, { 
   StyledAddress,
   StyledBody,
+  StyledFooter,
   StyledHeader,
   StyledHeading,
   StyledH1,
@@ -62,6 +64,7 @@ export default (event) => {
     category,
     date: d, 
     html, 
+    registration,
     time, 
     title, 
     venue 
@@ -80,6 +83,11 @@ export default (event) => {
         {renderVenue(venue)}
         {renderCategory(category)}
       </StyledBody>
+      {registration && 
+        <StyledFooter>
+          <Button href={registration} primary target="_blank">🎉 Register 🎉</Button>
+        </StyledFooter>
+      }
     </StyledEvent>
   )
 }

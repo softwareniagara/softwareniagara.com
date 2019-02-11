@@ -7,6 +7,7 @@ export default styled.article`
   background-color: white;
   border-radius: 15px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.125);
+  color: ${theme.light.textColor.primary};
   font-family: ${theme.base.fontFamily.sans};
   font-size: 1rem;
   line-height: 1.2;
@@ -16,6 +17,7 @@ export default styled.article`
   overflow: hidden;
 
   h1, h2, h3, h4, h5, h6 {
+    color: ${theme.light.headingColor.primary};
     margin: 0;
   }
 
@@ -53,9 +55,11 @@ export default styled.article`
 
   a {
     color: ${theme.base.accentColor.primary};
+    text-decoration: none;
 
     &:hover {
       color: ${theme.base.accentColor.primaryDarker};
+      text-decoration: underline;
     }
   }
 `

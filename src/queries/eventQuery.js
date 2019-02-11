@@ -18,6 +18,7 @@ module.exports = `
             category
             city
             date
+            registration
             slug
             summary
             time
