@@ -25,7 +25,6 @@ module.exports = {
         theme_color: '#94C1FF',
         display: 'standalone',
         orientation: 'any',
-        start_url: '?homescreen=1',
         version: '0.0.1',
         icons: {
           android: true,
