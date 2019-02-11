@@ -4,12 +4,12 @@ const eventQuery = require('../queries/eventQuery')
 const pageQuery = require('../queries/pageQuery')
 const venueQuery = require('../queries/venueQuery')
 
-const getEdges = ({ 
-  data: { 
-    allMarkdownRemark: { 
-      edges 
-    } 
-  } 
+const getEdges = ({
+  data: {
+    allMarkdownRemark: {
+      edges
+    }
+  }
 }) => edges
 
 const parseCategory = category => {
@@ -23,21 +23,21 @@ const parseCategory = category => {
 }
 
 const parseEvent = event => {
-  const { 
-    node: { 
-      frontmatter: { 
+  const {
+    node: {
+      frontmatter: {
         category,
         city,
-        date, 
+        date,
         registration,
         slug,
         summary,
-        time, 
+        time,
         title,
-        venue 
-      }, 
+        venue
+      },
       html
-    } 
+    }
   } = event
   return {
     category,
