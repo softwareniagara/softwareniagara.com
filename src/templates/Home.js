@@ -9,7 +9,7 @@ export default ({ pageContext: { events } } = { events: [] }) => {
   return (
     <DefaultLayout>
       <Action primary to='/code-of-conduct'>
-       📜 Code of Conduct
+        <span role="img" aria-labelledby="button-label">📜</span> <span id="button-label">Code of Conduct</span>
       </Action>
       <Events events={events} />
       <Helmet>

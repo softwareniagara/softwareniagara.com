@@ -10,10 +10,10 @@ import SvgLogo from '../../svg/Logo.svg'
 
 const Logo = ({ name, slogan }) => (
   <StyledLogo>
-    <Link to='/'>
+    <Link to='/' title="Software Niagara" aria-labelledby="site-title">
       <SvgLogo />
     </Link>    
-    {name && <StyledH1>{name}</StyledH1>}
+    {name && <StyledH1 id="site-title">{name}</StyledH1>}
     {slogan && <StyledH2>{slogan}</StyledH2>}
   </StyledLogo>
 )

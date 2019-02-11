@@ -50,7 +50,7 @@ const renderVenue = venue => {
     <>
       <StyledHeading style={{marginTop: '2.5rem'}}>Venue</StyledHeading>
       <StyledAddress>
-        <a href={mapsLink(venue)} target="_blank">{title}</a><br />
+        <a href={mapsLink(venue)} target="_blank" rel="noopener noreferrer">{title}</a><br />
         {address}<br />
         {city}, {province}<br />
         {postalCode}<br />
@@ -85,9 +85,12 @@ export default (event) => {
       </StyledBody>
       {registration && 
         <StyledFooter>
-          <Button href={registration} primary target="_blank">🎉 Register 🎉</Button>
+          <Button href={registration} primary target="_blank" rel="noopener noreferrer">
+            <span role="img" aria-labelledby="cta-label">🎉</span> <span id="cta-label">Register</span>
+          </Button>
         </StyledFooter>
       }
     </StyledEvent>
   )
 }
+

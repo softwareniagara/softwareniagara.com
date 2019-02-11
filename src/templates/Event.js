@@ -8,7 +8,9 @@ import Event from '../components/Event'
 export default ({ pageContext: { event } } = { event: {} }) => {
   return (
     <DefaultLayout>
-      <Action to="/">📅 Back to Events</Action>
+      <Action to="/">
+        <span role="img" aria-labelledby="button-label">📅</span> <span id="button-label">Back to Events</span>
+      </Action>
       <Event {...event} />
       <Helmet>
         <title>{event.title} | Software Niagara</title>

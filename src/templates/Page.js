@@ -9,7 +9,7 @@ export default ({ pageContext: { page } } = { page: {} }) => {
   return (
     <DefaultLayout>
       <Action to='/'>
-        📅 Back to Events
+        <span role="img" aria-labelledby="button-label">📅</span> <span id="button-label">Back to Events</span>
       </Action>
       <Page {...page} />
       <Helmet>

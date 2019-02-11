@@ -1,8 +1,8 @@
 import React from 'react'
 
-import StyledPage, { StyledLink, StyledNav } from './Page.css'
+import StyledPage from './Page.css'
 
-export default ({ title, html }) => (
+export default ({ html }) => (
   <StyledPage>
     <div dangerouslySetInnerHTML={{__html: html}} />
   </StyledPage>

@@ -4,11 +4,11 @@ export default {
       primary: '#006BFE',
       primaryDarker: '#0061FF',
       secondary: '#94C1FF',
-      tertiary: '#00CE78',
-      tertiaryFaint: '#C5F7E2',
+      tertiary: '#01874f',
+      tertiaryFaint: '#FFFFFF',
     },
     dangerColor: {
-      primary: '#F64060',
+      primary: '#e50f35',
     },
     fontFamily: {
       sans: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
