@@ -1,6 +1,6 @@
 ---
 title: "Code of Conduct"
-slug: "/code-of-conduct"
+slug: "code-of-conduct"
 ---
 
 # Code of Conduct
