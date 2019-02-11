@@ -8,6 +8,12 @@ module.exports = {
     'gatsby-plugin-styled-components',
     'gatsby-transformer-remark',
     {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-34081005-1',
+      },
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'categories',
