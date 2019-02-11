@@ -11,7 +11,7 @@ export default styled.div`
   min-width: 4rem;
   overflow: hidden;
 
-  @media screen and (max-width: ${theme.base.screen.sm}) {
+  @media screen and (max-width: ${theme.base.screen.xs}) {
     display: none;
   }
 `

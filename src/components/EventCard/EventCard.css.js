@@ -8,7 +8,7 @@ export default styled.article`
   display: flex;
   font-family: ${theme.base.fontFamily.sans};
   font-size: ${theme.base.fontSize.base};
-  padding: 2rem;
+  padding: 1.5rem 1rem;
   transition: box-shadow 150ms ease-in-out;
 
   &:hover {

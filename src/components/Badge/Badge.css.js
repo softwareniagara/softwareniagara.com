@@ -20,9 +20,12 @@ export default styled.span`
   }
 
   @media screen and (max-width: ${theme.base.screen.sm}) {
-    border-radius: 3px;
-    font-size: 0.6;
+    font-size: 0.6rem;
     font-weight: 700;
+  }
+
+  @media screen and (max-width: ${theme.base.screen.xs}) {
+    border-radius: 3px;
 
     &.is-primary {
       padding: 0.25rem 0.5rem;

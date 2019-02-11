@@ -14,7 +14,7 @@ export const StyledBody = styled.div`
 export const StyledDateAndTime = styled.div`
   display: none;
 
-  @media screen and (max-width: ${theme.base.screen.sm}) {
+  @media screen and (max-width: ${theme.base.screen.xs}) {
       display: block;
   }
 `
@@ -38,7 +38,9 @@ export const StyledH3 = styled.h3`
 
   @media screen and (max-width: ${theme.base.screen.sm}) {
     font-size: 1.25rem;
+  }
 
+  @media screen and (max-width: ${theme.base.screen.xs}) {
     > * {
       display: none !important;
     }
@@ -61,7 +63,7 @@ export const StyledH4 = styled.h4`
 export const StyledTime = styled.span`
   font-weight: 700;
 
-  @media screen and (max-width: ${theme.base.screen.sm}) {
+  @media screen and (max-width: ${theme.base.screen.xs}) {
     display: none;
   }
 `
