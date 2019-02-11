@@ -16,6 +16,7 @@ module.exports = `
         node {
           frontmatter {
             category
+            city
             date
             slug
             summary

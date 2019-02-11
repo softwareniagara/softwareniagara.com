@@ -4,7 +4,8 @@ slug: "devtricks-52"
 category: "devtricks"
 date: "2019-01-14"
 time: "7PM"
-venue: "Landlord Web Solutions"
+venue: "lws"
+city: "St. Catharines"
 ---
 
 The first DevTricks of 2019 is being hosted by Landlord Web Solutions.

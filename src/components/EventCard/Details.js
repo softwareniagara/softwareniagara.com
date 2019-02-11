@@ -35,7 +35,7 @@ export default ({ date, summary, time, title, venue }) => {
         </StyledDateAndTime>
         <StyledH4>
           <StyledTime>{time} · </StyledTime>
-          {venue}
+          {venue && venue.title}
         </StyledH4>
       </StyledHeader>
       <StyledBody>

@@ -27,5 +27,12 @@ module.exports = {
         path: `${__dirname}/src/content/pages`,
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'venues',
+        path: `${__dirname}/src/content/venues`,
+      },
+    },
   ],
 }
