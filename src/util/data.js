@@ -1,6 +1,7 @@
 // Use commonJS module format as this may be consumed by NodeJS script
 const categoryQuery = require('../queries/categoryQuery')
 const eventQuery = require('../queries/eventQuery')
+const pageQuery = require('../queries/pageQuery')
 
 const getEdges = ({ 
   data: { 
@@ -26,6 +27,7 @@ const parseEvent = event => {
       frontmatter: { 
         category,
         date, 
+        slug,
         summary,
         time, 
         title,
@@ -38,10 +40,28 @@ const parseEvent = event => {
     category,
     html,
     date,
+    slug,
     summary,
     time,
     title,
     venue
+  }
+}
+
+const parsePage = page => {
+  const {
+    node: {
+      frontmatter: {
+        slug,
+        title,
+      },
+      html,
+    }
+  } = page
+  return {
+    html,
+    slug,
+    title,
   }
 }
 
@@ -68,7 +88,15 @@ const fetchAllEvents = (graphql) => new Promise(resolve => {
     })
   })
 
+const fetchAllPages = (graphql) => new Promise(resolve => {
+  graphql(pageQuery).then(results => {
+    const pages = getEdges(results).map(p => parsePage(p))
+    resolve(pages)
+  })
+})
+
 module.exports = {
   fetchAllEvents,
+  fetchAllPages,
   getEdges,
 }

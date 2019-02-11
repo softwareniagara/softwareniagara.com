@@ -9,10 +9,9 @@ import StyledEventCalendar, {
 } from './Calendar.css'
 
 export default ({ date }) => {
-  const d = new Date(date)
-  const day = getDay(d)
-  const month = getMonth(d)
-  const year = getYear(d)
+  const day = getDay(date)
+  const month = getMonth(date)
+  const year = getYear(date)
 
   return (
       <StyledEventCalendar>

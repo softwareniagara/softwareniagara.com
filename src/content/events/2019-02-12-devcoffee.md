@@ -1,7 +1,8 @@
 ---
-title: "DevCoffee February Roundtable"
+title: "DevCoffee 6"
+slug: "devcoffee-6"
 category: "devcoffee"
-date: "February 12, 2019"
+date: "2019-02-12"
 time: "7PM"
 venue: "Fine Grind Cafe"
 ---

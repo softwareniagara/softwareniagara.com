@@ -16,9 +16,9 @@ export default ({ events = [] }) => {
   return (
     <StyledEvents>
       <StyledList>
-        {events.map(event => (
+        {events.map((event, index) => (
           <StyledListItem>
-            <StyledLink key={event.id}>
+            <StyledLink key={index} to={`/events/${event.slug}`}>
               <EventCard {...event }/>
             </StyledLink>
           </StyledListItem>

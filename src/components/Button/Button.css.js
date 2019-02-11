@@ -13,6 +13,7 @@ export default (Component) => styled(Component)`
   font-size: ${theme.base.fontSize.base};
   font-weight: 600;
   padding: 1rem 2rem;
+  text-decoration: none;
   text-transform: uppercase;
   transition: all 150ms ease-in-out;
 

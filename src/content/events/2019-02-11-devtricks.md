@@ -1,7 +1,8 @@
 ---
-title: "DevTricks February Edition"
+title: "DevTricks 53"
+slug: "devtricks-53"
 category: "devtricks"
-date: "February 11, 2019"
+date: "2019-02-11"
 time: "7PM"
 venue: "Landlord Web Solutions"
 ---

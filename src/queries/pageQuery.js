@@ -4,24 +4,15 @@ module.exports = `
     allMarkdownRemark(
       filter: {
         fileAbsolutePath: {
-          glob: "**/events/*.md"
+          glob: "**/pages/*.md"
         } 
       },
-      sort: {
-        order: DESC,
-        fields: [frontmatter___date, frontmatter___title]
-      }
     ) {
       edges {
         node {
           frontmatter {
-            category
-            date
             slug
-            summary
-            time
             title
-            venue
           }
           html
         }
