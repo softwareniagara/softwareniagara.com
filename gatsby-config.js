@@ -22,6 +22,7 @@ module.exports = {
         developerName: 'Nickolas Kenyeres',
         developerURL: 'https://www.knicklabs.com',
         background: '#EEF1F4',
+        short_name: "SN",
         theme_color: '#94C1FF',
         display: 'standalone',
         orientation: 'any',
@@ -41,7 +42,7 @@ module.exports = {
       },
     },
     // This has to come after gatsby-plugin-favicon to ingest the manifest.
-    'gatsy-plugin-offiline',
+    'gatsy-plugin-offline',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
