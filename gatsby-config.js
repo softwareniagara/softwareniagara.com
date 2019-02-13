@@ -21,7 +21,7 @@ module.exports = {
         appDescription: 'Startup and tech events for everyone',
         developerName: 'Nickolas Kenyeres',
         developerURL: 'https://www.knicklabs.com',
-        background: '#fff',
+        background: '#EEF1F4',
         theme_color: '#94C1FF',
         display: 'standalone',
         orientation: 'any',
@@ -40,6 +40,8 @@ module.exports = {
         },
       },
     },
+    // This has to come after gatsby-plugin-favicon to ingest the manifest.
+    'gatsy-plugin-offiline',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
