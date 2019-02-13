@@ -29,7 +29,7 @@ export default (Component) => styled(Component)`
   }
 
   &.is-secondary {
-    background: transparent;
+    background: white;
     color: ${theme.base.accentColor.primary};
 
     &:hover {
