@@ -1,4 +1,5 @@
 import Helmet from 'react-helmet'
+import PageTransition from 'gatsby-v2-plugin-page-transitions'
 import React from 'react'
 
 import Action from '../components/Action'
@@ -11,7 +12,11 @@ export default ({ pageContext: { page } } = { page: {} }) => {
       <Action to='/'>
         <span role="img" aria-labelledby="button-label">📅</span> <span id="button-label">Back to Events</span>
       </Action>
-      <Page {...page} />
+      <PageTransition
+        transitionTime={300}
+      >
+        <Page {...page} />
+      </PageTransition>
       <Helmet>
         <title>{page.title} | Software Niagara</title>
       </Helmet>
