@@ -5,7 +5,7 @@ import StyledLayout from './Layout.css'
 
 export default ({ children }) => (
   <PageTransition
-    transitionTime={500}
+    transitionTime={750}
   >
     <StyledLayout>
       { children }
