@@ -56,5 +56,7 @@ module.exports = {
         path: `${__dirname}/src/content/venues`,
       },
     },
+    // This has to go last in the array
+    'gatsby-plugin-netlify',
   ],
 }
