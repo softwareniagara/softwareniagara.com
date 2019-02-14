@@ -2,7 +2,7 @@
 title: "DevCoffee 6"
 slug: "devcoffee-6"
 category: "devcoffee"
-date: "2019-02-12"
+date: "2019-02-19"
 time: "7PM"
 venue: "finegrind"
 city: "St. Catharines"
