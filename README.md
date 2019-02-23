@@ -62,7 +62,7 @@ There are two things to note here:
 1. There is frontmatter and markdown content in these files. The markdown content comes after the frontmatter. 
 2. You must supply a unique slug. The unique slug can be referenced in other content to embed the category data in another content entity.
 
-### Adding an Event
+### Add an Event
 
 Create a markdown file in the `/src/content/events` directory using the name of the event as the filename.
 
@@ -90,7 +90,7 @@ There are a few things to note here:
 3. The category should reference an existing category entity by its slug.
 4. The venue should reference an existing venue entity by its slug.
 
-### Adding a Page
+### Add a Page
 
 Create a markdown file in the `/src/content/pages` directory using the name of the page as the filename.
 
@@ -112,7 +112,7 @@ There are a couple things to note here:
 1. There is frontmatter and markdown content in these files. The markdown content comes after the frontmatter.
 2. You must supply a unique slug. This slug will be path to the page. E.g. `/code-of-conduct` in this case.
 
-## Adding Features and Functionality
+## Add Features and Functionality
 
 This static website generator uses [GatsbyJS](https://www.gatsbyjs.org/). Contributing content to this website requires basic markdown knowledge. 
 
