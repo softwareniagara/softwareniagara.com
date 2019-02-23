@@ -132,9 +132,7 @@ When you submit a pull request, a live build will be automatically created and p
 
 If you look at the `checks` section in the pull request, you will see a line for `deploy/netlify`. When that has a green checkmark next to it, it means your branch has been built and published. Click the `details` link next to the lineitem to view your changes live. 
 
-The preview URL takes the format of `https://deploy-preview-{#PR}--softwareniagara.netlify.com/`
-
-where you may replace `{#PR}` with the number of your pull request.
+The preview URL takes the format of `https://deploy-preview-{#PR}--softwareniagara.netlify.com/`, where you may replace `{#PR}` with the number of your pull request.
 
 After your pull request is approved and merged to master, it will be automatically built and deployed to https://www.softwareniagara.com.
 
