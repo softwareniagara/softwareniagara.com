@@ -9,4 +9,4 @@ Software Niagara is a grassroots initiative that relies on the work of people fr
 3. Commit your changes
 4. Submit a pull request
 
-Please note that this project is released with a Contributor [Code of Conduct](CODE_OF_CONDUCT). By participating in this project, you agree to abide by its terms.
+Please note that this project is released with a Contributor [Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project, you agree to abide by its terms.
