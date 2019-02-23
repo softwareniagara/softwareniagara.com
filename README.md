@@ -1,96 +1,141 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's hello-world starter
-</h1>
+# softwareniagara.com
 
-Kick off your project with this hello-world boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+This project is the static website generator used to generate softwareniagara.com.
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+## Getting Started
 
-## 🚀 Quick start
+1. `git clone git@github.com:softwareniagara/softwareniagara.com.git`
+2. `cd softwareniagara.com`
+3. `npm install`
+4. `npm start`
+5. `open http://localhost:8000` to view the website
+6. `open http://localhost:8000/___graphql` to view Graphiql and explore the site's schema and data.
 
-1.  **Create a Gatsby site.**
+## Adding Content
 
-    Use the Gatsby CLI to create a new site, specifying the hello-world starter.
+The content for this website comes from markdown files stored in the `/src/content` directory.
 
-    ```sh
-    # create a new Gatsby site using the hello-world starter
-    npx gatsby new my-hello-world-starter https://github.com/gatsbyjs/gatsby-starter-hello-world
-    ```
+Creating content for this website requires basic markdown knowledge.
 
-1.  **Start developing.**
+Don't know markdown? Here's a [Guide to Mastering Mardown](https://guides.github.com/features/mastering-markdown/). This three minute read will have you up to speed for contributing to this project.
 
-    Navigate into your new site’s directory and start it up.
+### Add a Venue
 
-    ```sh
-    cd my-hello-world-starter/
-    gatsby develop
-    ```
+Create a markdown file in the `/src/content/venues` directory using the name of the venue as the filename.
 
-1.  **Open the source code and start editing!**
+Use the following template for the file:
 
-    Your site is now running at `http://localhost:8000`!
+```
+---
+title: "Fine Grind Cafe"
+slug: "finegrind"
+address: "37 James Street"
+city: "St. Catharines"
+province: "ON"
+postalCode: "L2R 5B4"
+---
+```
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+There are two things to note here:
 
-    Open the `my-hello-world-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+1. There is only frontmatter in these files.
+2. You must supply a unique slug. The unique slug can be referenced in other content to embed the venue data in another content entity.
 
-## 🧐 What's inside?
+### Add an Event Category
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+Create a markdown file in the `/src/content/categories` directory using the name of the category as the filename.
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+Use the following template for the file:
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+```
+---
+title: "DevTricks"
+slug: "devtricks"
+summary: "In this long-lived series, up to three developers share their tips & tricks with you."
+---
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+Learn tricks of the trade from local software developers.
+```
 
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+There are two things to note here:
 
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
+1. There is frontmatter and markdown content in these files. The markdown content comes after the frontmatter. 
+2. You must supply a unique slug. The unique slug can be referenced in other content to embed the category data in another content entity.
 
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+### Adding an Event
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
+Create a markdown file in the `/src/content/events` directory using the name of the event as the filename.
 
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+Use the following template for the file:
 
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+```
+---
+title: "DevTricks 53"
+slug: "devtricks-53"
+category: "devtricks"
+date: "2019-02-11"
+time: "7PM"
+venue: "lws"
+city: "St. Catharines"
+registration: "https://www.facebook.com/events/403445813532794/"
+---
 
-9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
+Mark your calendar, DevTricks February Edition is happening! Working on something cool or using some sort of tech that everyone should know about? We want to hear about it! Feel free to sign up to do a talk.
+```
 
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+There are a few things to note here:
 
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+1. There is frontmatter and markdown content in these files. The markdown content comes after the frontmatter.
+2. You must supply a unique slug. This slug will be appended to `/events` and form the URL for this event. E.g. `/events/devtricks-53` in this case.
+3. The category should reference an existing category entity by its slug.
+4. The venue should reference an existing venue entity by its slug.
 
-12. **`README.md`**: A text file containing useful reference information about your project.
+### Adding a Page
 
-## 🎓 Learning Gatsby
+Create a markdown file in the `/src/content/pages` directory using the name of the page as the filename.
 
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
+Use the following template for the file:
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+```
+---
+title: "Code of Conduct"
+slug: "code-of-conduct"
+---
 
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+# Code of Conduct
 
-## 💫 Deploy
+All participants of The Software Niagara Community are expected to abide by our Code of Conduct, both online and during in-person events that are hosted and/or associated with Software Niagara.
+```
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-hello-world)
+There are a couple things to note here:
 
-<!-- AUTO-GENERATED-CONTENT:END -->
+1. There is frontmatter and markdown content in these files. The markdown content comes after the frontmatter.
+2. You must supply a unique slug. This slug will be path to the page. E.g. `/code-of-conduct` in this case.
+
+## Adding Features and Functionality
+
+This static website generator uses [GatsbyJS](https://www.gatsbyjs.org/). Contributing content to this website requires basic markdown knowledge. 
+
+Adding features and functionality to this website via the static site generator will require comfort with JavaScript including newer language features. It may also, depending on what you are trying to achieve, require comfort with GraphQL.
+
+Finally, knowledge of GatsbyJS will come in handy. If you are not familiar with GatbsyJS, checkout the [tutorial for creating a site](https://www.gatsbyjs.org/tutorial/) or the [documentation and code samples](https://www.gatsbyjs.org/docs/).
+
+## Contributing Guidelines
+
+After adding content, features, or functionality, you may submit a pull request. 
+
+See [Contributing Guidelines](CONTRIBUTING.md) for more details.
+
+## Deployment
+
+When you submit a pull request, a live build will be automatically created and published on Netlify. 
+
+If you look at the `checks` section in the pull request, you will see a line for `deploy/netlify`. When that has a green checkmark next to it, it means your branch has been built and published. Click the `details` link next to the lineitem to view your changes live. 
+
+The preview URL takes the format of `https://deploy-preview-{#PR}--softwareniagara.netlify.com/`, where you may replace `{#PR}` with the number of your pull request.
+
+After your pull request is approved and merged to master, it will be automatically built and deployed to https://www.softwareniagara.com.
+
+## Code of Conduct
+
+We have tried to make this project easy for anyone to contribute to, preview their contributions, and publish them to the live website. We appreciate any and all contributions, though we do reseve the right to not accept contributions should they not be inline with the direction of the project, not be factual, or not adhere to our [Code of Conduct](CODE_OF_CONDUCT.md).
