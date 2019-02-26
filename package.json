@@ -9,7 +9,10 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
+    "lint": "npm run lint:js",
+    "lint-staged": "lint-staged",
+    "lint:js": "eslint \"./src/**/*.js\" \"./src/**/*.jsx\"",
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
@@ -46,6 +49,19 @@
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-react": "^7.12.4",
-    "eslint-plugin-standard": "^4.0.0"
+    "eslint-plugin-standard": "^4.0.0",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && gatsby build"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ]
   }
 }
