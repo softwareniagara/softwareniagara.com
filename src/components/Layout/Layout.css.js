@@ -4,7 +4,7 @@ import theme from '../../util/theme'
 
 export const GlobalStyle = createGlobalStyle`
   html {
-    background-color: ${theme.light.backgroundColor.secondary};
+    background-color: ${ theme.light.backgroundColor.secondary };
   }
   body {
     line-height: 1;
@@ -14,7 +14,7 @@ export const GlobalStyle = createGlobalStyle`
 `
 
 export default styled.div`
-  background-color: ${theme.light.backgroundColor.secondary};
-  border-top: 0.125rem solid ${theme.base.accentColor.primary};
+  background-color: ${ theme.light.backgroundColor.secondary };
+  border-top: 0.125rem solid ${ theme.base.accentColor.primary };
   min-height: 100vh;
 `

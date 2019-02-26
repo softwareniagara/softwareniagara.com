@@ -3,14 +3,14 @@ import styled from 'styled-components'
 import theme from '../../util/theme'
 
 export default styled.footer`
-  color: ${theme.light.headingColor.secondary};
-  font-family: ${theme.base.fontFamily.sans};
+  color: ${ theme.light.headingColor.secondary };
+  font-family: ${ theme.base.fontFamily.sans };
   font-size: 0.8rem;
   line-height: 1.2;
   padding: 1rem 2rem 6rem 2rem;
   text-align: center;
 
-  @media screen and (max-width: ${theme.base.screen.sm}) {
+  @media screen and (max-width: ${ theme.base.screen.sm }) {
     padding-top: 1rem;
   }
 `

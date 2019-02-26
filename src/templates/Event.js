@@ -10,7 +10,8 @@ export default ({ pageContext: { event } } = { event: {} }) => {
   return (
     <DefaultLayout>
       <Action to="/">
-        <span role="img" aria-labelledby="button-label">📅</span> <span id="button-label">Back to Events</span>
+        <span role="img" aria-labelledby="button-label">📅</span>{' '}
+        <span id="button-label">Back to Events</span>
       </Action>
       <PageTransition
         transitionTime={300}

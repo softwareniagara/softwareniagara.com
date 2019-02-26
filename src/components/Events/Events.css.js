@@ -25,7 +25,7 @@ export const StyledListItem = styled.li`
     margin-bottom: 0;
   }
 
-  @media screen and (max-width: ${theme.base.screen.sm}) {
+  @media screen and (max-width: ${ theme.base.screen.sm }) {
     margin-bottom: 1rem;
 
     &:last-child {
@@ -33,7 +33,7 @@ export const StyledListItem = styled.li`
     }
   }
 
-  @media screen and (max-width: ${theme.base.screen.xs}) {
+  @media screen and (max-width: ${ theme.base.screen.xs }) {
     margin-bottom: 0.5rem;
 
     &:last-child {

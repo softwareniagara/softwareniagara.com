@@ -8,7 +8,7 @@ import StyledEventDetails, {
   StyledHeader,
   StyledH3,
   StyledH4,
-  StyledTime,
+  StyledTime
 } from './Details.css'
 
 const getBadge = date => isFuture(date)
@@ -16,7 +16,7 @@ const getBadge = date => isFuture(date)
   : null
 
 const getDateAndTime = (date, time) => {
-  const label = `${time} · ${formatDate(date)}`
+  const label = `${ time } · ${ formatDate(date) }`
   return <Badge primary={isFuture(date)}>{label}</Badge>
 }
 

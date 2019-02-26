@@ -11,8 +11,9 @@
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
     "lint": "npm run lint:js",
+    "lint:fix": "npm run lint:js -- --fix",
     "lint-staged": "lint-staged",
-    "lint:js": "eslint \"./src/**/*.js\" \"./src/**/*.jsx\""
+    "lint:js": "eslint \"./src/**/*.js\""
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
@@ -59,7 +60,7 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{js,jsx}": [
+    "src/**/*.js": [
       "eslint --fix",
       "git add"
     ]

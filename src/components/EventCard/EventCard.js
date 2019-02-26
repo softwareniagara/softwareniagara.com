@@ -7,6 +7,6 @@ import StyledEventCard from './EventCard.css'
 export default ({ date, ...rest }) => (
   <StyledEventCard>
     <Calendar date={date} />
-    <Details { ...{date, ...rest} } />
+    <Details { ...{ date, ...rest } } />
   </StyledEventCard>
 )
