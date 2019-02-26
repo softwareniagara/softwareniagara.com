@@ -8,6 +8,7 @@ module.exports = {
     'gatsby-plugin-react-svg',
     'gatsby-plugin-styled-components',
     'gatsby-transformer-remark',
+    'gatsby-plugin-extract-schema',
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {

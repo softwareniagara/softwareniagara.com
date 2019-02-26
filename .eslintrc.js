@@ -1,6 +1,8 @@
+const path = require('path')
+
 module.exports = {
   extends: ["standard"],
-  plugins: ["standard", "react"],
+  plugins: ["standard", "react", "graphql"],
   rules: {
     "no-var": "error", // optional, recommended when using es6+
     "no-unused-vars": 1, // recommended
@@ -42,6 +44,16 @@ module.exports = {
     // react plugin - options
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
+
+    // graphql plugin
+    "graphql/template-strings": [
+      "error",
+      {
+        env: "relay",
+        schemaJsonFilepath: path.resolve(__dirname, "./schema.json"),
+        tagName: "graphql"
+      }
+    ]
   },
   parser: "babel-eslint",
   parserOptions: {
