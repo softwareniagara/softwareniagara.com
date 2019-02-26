@@ -1,5 +1,7 @@
 // Use commonJS module format as this may be consumed by NodeJS script
-module.exports = `
+const gql = require('../util/gql')
+
+module.exports = gql`
   query {
     allMarkdownRemark(
       filter: {
