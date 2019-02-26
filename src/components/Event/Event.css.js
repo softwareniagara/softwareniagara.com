@@ -6,8 +6,8 @@ export default styled.article`
   background-color: white;
   border-radius: 15px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.125);
-  color: ${theme.light.textColor.primary};
-  font-family: ${theme.base.fontFamily.sans};
+  color: ${ theme.light.textColor.primary };
+  font-family: ${ theme.base.fontFamily.sans };
   font-size: 1rem;
   line-height: 1.2;
   margin: 0 auto;
@@ -20,11 +20,11 @@ export const StyledAddress = styled.address`
   margin-top: 20px;
 
   a {
-    color: ${theme.base.accentColor.primary};
+    color: ${ theme.base.accentColor.primary };
     text-decoration: none;
 
     &:hover {
-      color: ${theme.base.accentColor.primaryDarker};
+      color: ${ theme.base.accentColor.primaryDarker };
       text-decoration: underline;
     }
   }
@@ -40,14 +40,14 @@ export const StyledFooter = styled.footer`
 `
 
 export const StyledHeader = styled.header`
-  background-color: ${theme.base.dangerColor.primary};
+  background-color: ${ theme.base.dangerColor.primary };
   color: white;
   padding: 0.75rem 1rem;
   text-align: center;
 `
 
 export const StyledHeading = styled.h3`
-  color: ${theme.light.headingColor.primary};
+  color: ${ theme.light.headingColor.primary };
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 0;
@@ -104,11 +104,11 @@ export const StyledTypography = styled.div`
   }
 
   a {
-    color: ${theme.base.accentColor.primary};
+    color: ${ theme.base.accentColor.primary };
     text-decoration: none;
 
     &:hover {
-      color: ${theme.base.accentColor.primaryDarker};
+      color: ${ theme.base.accentColor.primaryDarker };
       text-decoration: underline;
     }
   }

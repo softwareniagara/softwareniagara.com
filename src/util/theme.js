@@ -1,3 +1,16 @@
+const sans = [
+  '-apple-system',
+  'BlinkMacSystemFont',
+  '"Segoe UI"',
+  'Roboto',
+  'Helvetica',
+  'Arial',
+  'sans-serif',
+  '"Apple Color Emoji"',
+  '"Segoe UI Emoji"',
+  '"Segoe UI Symbol"',
+].join(', ')
+
 export default {
   base: {
     accentColor: {
@@ -11,7 +24,7 @@ export default {
       primary: '#e50f35',
     },
     fontFamily: {
-      sans: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
+      sans,
     },
     fontSize: {
       base: '1rem',

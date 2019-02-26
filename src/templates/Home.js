@@ -10,7 +10,8 @@ export default ({ pageContext: { events } } = { events: [] }) => {
   return (
     <DefaultLayout>
       <Action primary to='/code-of-conduct'>
-        <span role="img" aria-labelledby="button-label">📜</span> <span id="button-label">Code of Conduct</span>
+        <span role="img" aria-labelledby="button-label">📜</span>{' '}
+        <span id="button-label">Code of Conduct</span>
       </Action>
       <PageTransition
         transitionTime={300}
@@ -19,7 +20,9 @@ export default ({ pageContext: { events } } = { events: [] }) => {
       </PageTransition>
       <Helmet>
         <title>Events | Software Niagara</title>
-        <meta name="description" content="Startup and tech events for web and game developers in Niagara" />
+        <meta name="description"
+          content="Startup and tech events for web and game developers
+           in Niagara" />
       </Helmet>
     </DefaultLayout>
   )

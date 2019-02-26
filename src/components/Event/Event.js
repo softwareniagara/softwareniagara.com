@@ -2,7 +2,7 @@ import React from 'react'
 
 import Button from '../Button'
 import { formatDate } from '../../util/dates'
-import StyledEvent, { 
+import StyledEvent, {
   StyledAddress,
   StyledBody,
   StyledFooter,
@@ -10,17 +10,17 @@ import StyledEvent, {
   StyledHeading,
   StyledH1,
   StyledH2,
-  StyledTypography,
+  StyledTypography
 } from './Event.css'
 
 const mapsLink = venue => [
-  'title', 
-  'address', 
-  'city', 
-  'province', 
+  'title',
+  'address',
+  'city',
+  'province',
   'postalCode'
 ].reduce((accumulator, key) => {
-  return `${accumulator}${venue[key].replace(/ /g, '+')},+`
+  return `${ accumulator }${ venue[key].replace(/ /g, '+') },+`
 }, 'https://maps.google.com?q=')
 
 const renderCategory = category => {
@@ -31,10 +31,10 @@ const renderCategory = category => {
   const { html, title } = category
   return (
     <>
-      <StyledHeading style={{marginTop: '2.5rem'}}>
+      <StyledHeading style={{ marginTop: '2.5rem' }}>
         About {title}
       </StyledHeading>
-      <StyledTypography dangerouslySetInnerHTML={{__html: html}} />
+      <StyledTypography dangerouslySetInnerHTML={{ __html: html }} />
     </>
   )
 }
@@ -48,9 +48,15 @@ const renderVenue = venue => {
 
   return (
     <>
-      <StyledHeading style={{marginTop: '2.5rem'}}>Venue</StyledHeading>
+      <StyledHeading style={{ marginTop: '2.5rem' }}>Venue</StyledHeading>
       <StyledAddress>
-        <a href={mapsLink(venue)} target="_blank" rel="noopener noreferrer">{title}</a><br />
+        <a href={mapsLink(venue)}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {title}
+        </a>
+        <br />
         {address}<br />
         {city}, {province}<br />
         {postalCode}<br />
@@ -59,15 +65,15 @@ const renderVenue = venue => {
   )
 }
 
-export default (event) => {
+export default event => {
   const {
     category,
-    date: d, 
-    html, 
+    date: d,
+    html,
     registration,
-    time, 
-    title, 
-    venue 
+    time,
+    title,
+    venue
   } = event
   const date = formatDate(d)
 
@@ -79,18 +85,22 @@ export default (event) => {
       </StyledHeader>
       <StyledBody>
         <StyledHeading>Details</StyledHeading>
-        <StyledTypography dangerouslySetInnerHTML={{__html: html}} />
+        <StyledTypography dangerouslySetInnerHTML={{ __html: html }} />
         {renderVenue(venue)}
         {renderCategory(category)}
       </StyledBody>
-      {registration && 
+      {registration &&
         <StyledFooter>
-          <Button href={registration} primary target="_blank" rel="noopener noreferrer">
-            <span role="img" aria-labelledby="cta-label">🎉</span> <span id="cta-label">Register</span>
+          <Button href={registration}
+            primary
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span role="img" aria-labelledby="cta-label">🎉</span>{' '}
+            <span id="cta-label">Register</span>
           </Button>
         </StyledFooter>
       }
     </StyledEvent>
   )
 }
-

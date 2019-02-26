@@ -5,7 +5,7 @@ import EventCard from '../EventCard'
 import StyledEvents, {
   StyledLink,
   StyledList,
-  StyledListItem,
+  StyledListItem
 } from './Events.css'
 
 export default ({ events = [] }) => {
@@ -18,7 +18,7 @@ export default ({ events = [] }) => {
       <StyledList>
         {events.map((event, index) => (
           <StyledListItem key={event.slug}>
-            <StyledLink to={`/events/${event.slug}`}>
+            <StyledLink to={`/events/${ event.slug }`}>
               <EventCard {...event }/>
             </StyledLink>
           </StyledListItem>

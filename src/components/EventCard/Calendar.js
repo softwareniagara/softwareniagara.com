@@ -1,11 +1,11 @@
 import React from 'react'
 
 import { getDay, getMonth, getYear } from '../../util/dates'
-import StyledEventCalendar, { 
+import StyledEventCalendar, {
   StyledBody,
   StyledDay,
   StyledHeader,
-  StyledYear,
+  StyledYear
 } from './Calendar.css'
 
 export default ({ date }) => {
@@ -14,12 +14,12 @@ export default ({ date }) => {
   const year = getYear(date)
 
   return (
-      <StyledEventCalendar>
-          <StyledHeader>{ month }</StyledHeader>
-          <StyledBody>
-              <StyledDay>{ day }</StyledDay>
-              <StyledYear>{ year }</StyledYear>
-          </StyledBody>
-      </StyledEventCalendar>
+    <StyledEventCalendar>
+      <StyledHeader>{ month }</StyledHeader>
+      <StyledBody>
+        <StyledDay>{ day }</StyledDay>
+        <StyledYear>{ year }</StyledYear>
+      </StyledBody>
+    </StyledEventCalendar>
   )
 }

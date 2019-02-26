@@ -1,7 +1,7 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from 'react'
+import PropTypes from 'prop-types'
 
-export default function HTML(props) {
+export default function HTML (props) {
   return (
     <html lang="en" {...props.htmlAttributes}>
       <head>
@@ -9,7 +9,10 @@ export default function HTML(props) {
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
+          content="width=device-width,
+            initial-scale=1,
+            shrink-to-fit=no,
+            viewport-fit=cover"
         />
         {props.headComponents}
       </head>

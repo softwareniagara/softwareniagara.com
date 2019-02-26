@@ -93,35 +93,36 @@ const parseVenue = venue => {
   }
 }
 
-const fetchAllEvents = (graphql) => Promise.all([
-    graphql(categoryQuery),
-    graphql(eventQuery),
-    graphql(venueQuery),
-  ])
+const fetchAllEvents = graphql => Promise.all([
+  graphql(categoryQuery),
+  graphql(eventQuery),
+  graphql(venueQuery),
+])
   .then(results => {
-  const [rawCategories, rawEvents, rawVenues] = results.map(result => getEdges(result))
+    const [rawCategories, rawEvents, rawVenues] =
+      results.map(result => getEdges(result))
 
-  const categories = rawCategories.map(c => parseCategory(c))
-  const venues = rawVenues.map(v => parseVenue(v))
-  return rawEvents.map(e => {
-    const event = parseEvent(e)
-    const cMatches = categories.filter(({ slug }) => event.category === slug)
-    const category = cMatches.length ? cMatches[0] : undefined
-    const vMatches = venues.filter(({ slug }) => event.venue === slug)
-    const venue = vMatches.length ? vMatches[0] : undefined
-    return {
-      ...event,
-      summary: event.summary || category.summary,
-      category,
-      venue,
-    }
+    const categories = rawCategories.map(c => parseCategory(c))
+    const venues = rawVenues.map(v => parseVenue(v))
+    return rawEvents.map(e => {
+      const event = parseEvent(e)
+      const cMatches = categories.filter(({ slug }) => event.category === slug)
+      const category = cMatches.length ? cMatches[0] : undefined
+      const vMatches = venues.filter(({ slug }) => event.venue === slug)
+      const venue = vMatches.length ? vMatches[0] : undefined
+      return {
+        ...event,
+        summary: event.summary || category.summary,
+        category,
+        venue,
+      }
+    })
   })
-})
 
-const fetchAllPages = (graphql) => graphql(pageQuery)
-.then(
-  results => getEdges(results).map(p => parsePage(p))
-)
+const fetchAllPages = graphql => graphql(pageQuery)
+  .then(
+    results => getEdges(results).map(p => parsePage(p))
+  )
 
 module.exports = {
   fetchAllEvents,

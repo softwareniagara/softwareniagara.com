@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import theme from '../../util/theme'
 
 export default styled.header`
-  color: ${theme.light.headingColor.primary};
+  color: ${ theme.light.headingColor.primary };
   padding: 6rem 2rem 0 2rem;
   text-align: center;
 
@@ -19,11 +19,11 @@ export default styled.header`
     }
   }
 
-  @media screen and (max-width: ${theme.base.screen.sm}) {
+  @media screen and (max-width: ${ theme.base.screen.sm }) {
     padding: 2rem 1rem 1rem 1rem;
   }
 
-  @media screen and (max-width: ${theme.base.screen.xs}) {
+  @media screen and (max-width: ${ theme.base.screen.xs }) {
     padding: 2rem 0.5rem 1rem 0.5rem;
   }
 `
