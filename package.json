@@ -12,7 +12,7 @@
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
     "lint": "npm run lint:js",
     "lint-staged": "lint-staged",
-    "lint:js": "eslint \"./src/**/*.js\" \"./src/**/*.jsx\"",
+    "lint:js": "eslint \"./src/**/*.js\" \"./src/**/*.jsx\""
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
