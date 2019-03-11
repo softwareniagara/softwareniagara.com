@@ -19,7 +19,7 @@ export default ({ pageContext: { page } } = { page: {} }) => {
         <Page {...page} />
       </PageTransition>
       <Helmet>
-        <title>{page.title} | Software Niagara</title>
+        <title>{page.title} | {page.meta.title}</title>
       </Helmet>
     </DefaultLayout>
   )

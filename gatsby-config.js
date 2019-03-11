@@ -16,15 +16,15 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-manifest",
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        "name": "Software Niagara",
-        "short_name": "SN",
-        "start_url": "/",
-        background_color: "#EEF1F4",
-        theme_color: "#94C1FF",
-        display: "standalone",
-        icon: "./src/png/favicon.png",
+        'name': 'Software Niagara',
+        'short_name': 'SN',
+        'start_url': '/',
+        background_color: '#EEF1F4',
+        theme_color: '#94C1FF',
+        display: 'standalone',
+        icon: './src/png/favicon.png',
         include_favicon: true,
       }
     },
@@ -34,28 +34,28 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'categories',
-        path: `${__dirname}/src/content/categories`,
+        path: `${ __dirname }/src/content/categories`,
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'events',
-        path: `${__dirname}/src/content/events`,
+        path: `${ __dirname }/src/content/events`,
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'pages',
-        path: `${__dirname}/src/content/pages`,
+        path: `${ __dirname }/src/content/pages`,
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'venues',
-        path: `${__dirname}/src/content/venues`,
+        path: `${ __dirname }/src/content/venues`,
       },
     },
     // This has to go last in the array

@@ -3,6 +3,7 @@ const categoryQuery = require('../queries/categoryQuery')
 const eventQuery = require('../queries/eventQuery')
 const pageQuery = require('../queries/pageQuery')
 const venueQuery = require('../queries/venueQuery')
+const siteQuery = require('../queries/siteQuery')
 
 const getEdges = ({
   data: {
@@ -93,6 +94,18 @@ const parseVenue = venue => {
   }
 }
 
+const parseSite = ({ data }) => {
+  const {
+    site: {
+      siteMetadata: {
+        title,
+      },
+    },
+  } = data
+
+  return { title }
+}
+
 const fetchAllEvents = graphql => Promise.all([
   graphql(categoryQuery),
   graphql(eventQuery),
@@ -119,10 +132,15 @@ const fetchAllEvents = graphql => Promise.all([
     })
   })
 
-const fetchAllPages = graphql => graphql(pageQuery)
-  .then(
-    results => getEdges(results).map(p => parsePage(p))
-  )
+const fetchAllPages = graphql =>
+  Promise.all([graphql(pageQuery), graphql(siteQuery)])
+    .then(
+      ([pages, site]) => getEdges(pages).map(p => ({
+        ...parsePage(p),
+        meta: {
+          ...parseSite(site)
+        } }))
+    )
 
 module.exports = {
   fetchAllEvents,

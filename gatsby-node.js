@@ -16,10 +16,10 @@ const createHomePage = (createPage, events) => {
   })
 }
 
-createEventPages = (createPage, events) => {
+const createEventPages = (createPage, events) => {
   const EventPageTemplate = path.resolve('src/templates/Event.js')
   events.forEach(event => createPage({
-    path: `/events/${event.slug}`,
+    path: `/events/${ event.slug }`,
     component: EventPageTemplate,
     context: {
       event,
@@ -27,10 +27,10 @@ createEventPages = (createPage, events) => {
   }))
 }
 
-createPages = (createPage, pages) => {
+const createPages = (createPage, pages) => {
   const PageTemplate = path.resolve('src/templates/Page.js')
   pages.forEach(page => createPage({
-    path: `/${page.slug}`,
+    path: `/${ page.slug }`,
     component: PageTemplate,
     context: {
       page,
