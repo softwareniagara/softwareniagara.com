@@ -11,6 +11,6 @@ registration: "https://www.facebook.com/events/421706528602852/"
 
 April's edition of Devtricks will once again be hosted at Landlord Web Solutions.
 
-1. 
-2. 
+1. Hackathon Experiences - Athena Liu
+2. Apocalypse and Deadhaus Sonata - Denis Dyack
 3. 
