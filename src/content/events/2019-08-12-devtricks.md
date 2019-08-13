@@ -11,6 +11,7 @@ registration: "https://www.facebook.com/events/354175371934434/"
 
 August 2019 DevTricks is upon us!
 
-1. TBD ([Register on the forum](https://forum.softwareniagara.com/t/devtricks-august-12th-landlord-web-solutions/561) if you want to present)
-2. TBD ([Register on the forum](https://forum.softwareniagara.com/t/devtricks-august-12th-landlord-web-solutions/561) if you want to present)
-3. TBD ([Register on the forum](https://forum.softwareniagara.com/t/devtricks-august-12th-landlord-web-solutions/561) if you want to present)
+1. Glow Up: Affordable Ambiant Lighting - Rose Sherwood
+2. Sup: Daily standup tool written in Go - Nickolas Kenyeres
+3. Python Memory Structure - Janis Lesinskis
+4. Inert: A static site generator - Adam Daniels
