@@ -11,6 +11,6 @@ registration: "https://www.facebook.com/events/2593123684248492/"
 
 May 2019 DevTricks is upon us!
 
-1. I’m Over It: Goodbye WordPress. Hello Paid Platforms - Rose Merry
+1. I’m Over It: Goodbye WordPress. Hello Paid Platforms
 2.
 3.
