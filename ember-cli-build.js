@@ -2,9 +2,27 @@
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
-module.exports = function(defaults) {
+const purgecss = require('@fullhuman/postcss-purgecss')({
+  content: [
+    './app/**/*.hbs',
+    './app/**/*.html',
+  ]
+})
+
+module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
-    // Add options here
+    postcssOptions: {
+      compile: {
+        plugins: [
+          require('postcss-import'),
+          require('tailwindcss')('./app/styles/tailwind.js'),
+          require('autoprefixer'),
+          ...process.env.NODE_ENV == 'production'
+            ? [purgecss]
+            : []
+        ]
+      }
+    }
   });
 
   // Use `app.import` to add additional libraries to the generated
