@@ -15,7 +15,11 @@ module.exports = function (defaults) {
       compile: {
         plugins: [
           require('postcss-import'),
+          require('postcss-nested-ancestors'),
+          require('postcss-nested'),
           require('tailwindcss')('./app/styles/tailwind.js'),
+          require('postcss-at-rules-variables')({ atRules: ['media'] }),
+          require('postcss-custom-properties')({ preserve: false }),
           require('autoprefixer'),
           ...process.env.NODE_ENV == 'production'
             ? [purgecss]

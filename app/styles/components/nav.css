@@ -1,0 +1,14 @@
+.nav__logo {
+  height: var(--h-8);
+  width: var(--w-auto);
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  @media (min-width: var(--sm)) {
+    & {
+      height: var(--h-20);
+    }
+  }
+}
