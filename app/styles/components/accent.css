@@ -1,0 +1,7 @@
+.accent {
+  display: none;
+
+  @media (min-width: var(--lg)) {
+    display: block;
+  }
+}

@@ -1,8 +1,8 @@
-<div class="navbar-wrapper">
+<div class="navbar-wrapper" {{did-insert this.addListeners}} {{will-destroy this.removeListeners}}>
   <nav class="navbar">
     <div class="navbar__menu-wrapper">
       <div class="navbar__menu">
-        <a href="#" class="navbar__logo" tabindex="-1">
+        <a href="#" class="navbar__logo" tabindex="-1" title="Software Niagara">
           <svg width="100%" height="100%" viewBox="0 0 314 364" version="1.1" xml:space="preserve"
             style="fill-rule:evenodd;clip-rule:evenodd">
             <g id="Symbol">
@@ -20,7 +20,7 @@
             </g>
           </svg>
         </a>
-        <div class="navbar__cta-mobile">
+        <div class="navbar__cta-mobile" {{ref this "menuTrigger"}}>
           <button class="navbar__toggle" {{on "click" this.toggleMenu}} type="button">
             <svg class="navbar__toggle__bar" stroke="currentColor" fill="none" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -43,11 +43,11 @@
       </span>
     </div>
   </nav>
-  <div class="navbar-mobile-wrapper {{if this.isExpanded "is-open"}}">
+  <div class="navbar-mobile-wrapper {{if this.isOpen "is-open"}}" {{ref this "menuElement"}}>
     <div class="navbar-mobile">
       <div class="navbar-mobile__menu-wrapper">
         <div class="navbar-mobile__menu">
-          <a href="#" class="navbar__logo is-mobile" tabindex="-1">
+          <a href="#" class="navbar__logo is-mobile" tabindex="-1" title="Software Niagara">
             <svg width="100%" height="100%" viewBox="0 0 314 364" version="1.1" xml:space="preserve"
               style="fill-rule:evenodd;clip-rule:evenodd">
               <g id="Symbol">
@@ -66,7 +66,7 @@
             </svg>
           </a>
           <div class="-mr-2">
-            <button class="navbar-mobile__toggle" {{on "click" this.toggleMenu}} type="button">
+            <button class="navbar-mobile__toggle" {{on "click" this.toggleMenu}} tabindex="-1" type="button">
               <svg class="navbar-mobile__toggle__bar" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
               </svg>
@@ -74,13 +74,13 @@
           </div>
         </div>
         <div class="navbar-mobile__links">
-          <LinkTo class="navbar-mobile__link" @route="index">Home</LinkTo>
+          <LinkTo class="navbar-mobile__link" @route="index" {{ref this "menuStart"}}>Home</LinkTo>
           <LinkTo class="navbar-mobile__link" @route="about">About</LinkTo>
           <LinkTo class="navbar-mobile__link" @route="events">Events</LinkTo>
           <LinkTo class="navbar-mobile__link" @route="conduct">Code of Conduct</LinkTo>
         </div>
         <div>
-          <LinkTo class="navbar-mobile__button" @route="join">Join Us</LinkTo>
+          <LinkTo class="navbar-mobile__button" @route="join" {{ref this "menuEnd"}}>Join Us</LinkTo>
         </div>
       </div>
     </div>
