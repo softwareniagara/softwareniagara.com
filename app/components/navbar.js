@@ -4,6 +4,7 @@ import { action } from '@ember/object';
 
 const events = { CLICK: 'click', KEYDOWN: 'keydown' }
 const keys = { ESCAPE: 27, TAB: 9 }
+const selectors = { LINK: '.navbar-mobile__link' }
 
 export default class NavbarComponent extends Component {
   @tracked
@@ -58,7 +59,7 @@ export default class NavbarComponent extends Component {
   repeatMenu({ reverse = false } = {}) {
     reverse
       ? this.menuEnd.focus()
-      : this.menuElement.querySelector('.navbar-mobile__link').focus()
+      : this.menuElement.querySelector(selectors.LINK).focus()
   }
 
   @action
