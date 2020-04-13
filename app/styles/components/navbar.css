@@ -1,19 +1,7 @@
 .navbar-wrapper {
   position: relative;
-  padding-bottom: var(--p-16);
+  padding-bottom: var(--p-6);
   padding-top: var(--p-6);
-
-  @media (min-width: var(--md)) {
-    padding-bottom: var(--p-20);
-  }
-
-  @media (min-width: var(--lg)) {
-    padding-bottom: var(--p-24);
-  }
-
-  @media (min-width: var(--xl)) {
-    padding-bottom: var(--p-32);
-  }
 }
 
 .navbar {

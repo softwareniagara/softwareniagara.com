@@ -3,4 +3,7 @@
 @import "tailwindcss/utilities";
 
 @import "components/accent";
+@import "components/hero";
 @import "components/navbar";
+
+@import "application";

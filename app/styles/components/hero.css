@@ -1,0 +1,47 @@
+.hero {
+  @media (min-width: var(--lg)) {
+    direction: rtl;
+  }
+
+  &__accent {
+    margin-top: var(--m-12);
+    position: relative;
+
+    @media (min-width: var(--sm)) {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: var(--max-w-lg);
+    }
+
+    @media (min-width: var(--lg)) {
+      align-items: center;
+      direction: ltr;
+      display: flex;
+      margin-top: 0;
+      max-width: var(--max-0);
+    }
+  }
+
+  &__content {
+    margin-top: var(--m-8);
+    position: relative;
+
+    @media (min-width: var(--sm)) {
+      margin-top: var(--m-10);
+      text-align: center;
+    }
+
+    @media (min-width: var(--md)) {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: var(--m-12);
+      max-width: var(--max-w-2xl);
+    }
+
+    @media (min-width: var(--lg)) {
+      direction: ltr;
+      margin-top: 0;
+      text-align: left;
+    }
+  }
+}

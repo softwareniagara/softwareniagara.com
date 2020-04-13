@@ -1,0 +1,33 @@
+.layout {
+  margin: var(--m-8) auto 0 auto;
+  max-width: var(--max-w-screen-xl);
+  padding: 0 var(--p-4);
+
+  @media (min-width: var(--sm)) {
+    margin-top: var(--m-12);
+    padding: 0 var(--p-6);
+  }
+
+  @media (min-width: var(--md)) {
+    margin-top: var(--m-20);
+  }
+
+  @media (min-width: var(--xl)) {
+    margin-top: var(--m-24);
+  }
+
+  &__grid {
+    @media (min-width: var(--lg)) {
+      display: grid;
+      gap: var(--gap-8);
+      grid-gap: var(--gap-8);
+      grid-template-columns: var(--grid-cols-12);
+    }
+
+    &__column {
+      @media (min-width: var(--lg)) {
+        grid-column: var(--col-span-6);
+      }
+    }
+  }
+}
